@@ -2,7 +2,7 @@
     <h2 class="mt-5 mb-4">Jurnal yang tersedia</h2>
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Cari Jurnal" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        <button class="btn btn-primary" type="button" name="sumbit">Search</button>
     </div>
     <?php
     foreach ($data_jurnal as $d) {
@@ -18,7 +18,9 @@
     <?php
     }
     ?>
-    <?php
-    echo $this->pagination->create_links();
-    ?>
+    <div class="tablefooter clearfix">
+        <div class="pagination">
+            <?php echo $this->pagination->create_links(); ?>
+        </div>
+    </div>
 </section>

@@ -14,9 +14,10 @@ class Utama extends CI_Controller
     {
 
         $config = [
-            'base_url' => "http://ta-rweb.test/Utama/index",
+            'base_url' => base_url('Utama/index'),
             'total_rows' => $this->jurnal_model->countAllJurnal(),
             'per_page' => 4,
+            'use_page_numbers' => TRUE,
 
             'full_tag_open' => '<nav><ul class="pagination">',
             'full_tag_close' => ' </ul></nav>',
@@ -49,10 +50,10 @@ class Utama extends CI_Controller
 
         $this->pagination->initialize($config);
 
+        $data['start'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
         $data = [
-            'start' => $this->uri->segment(0),
             'title' => "JurnalTIF",
-            'data_jurnal' => $this->jurnal_model->getJurnal($config['per_page'], 0)
+            'data_jurnal' => $this->jurnal_model->getJurnal($config['per_page'], $data['start'])
         ];
 
 
