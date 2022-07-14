@@ -51,6 +51,17 @@ class jurnal_model extends CI_Model
         //select * from jurnal order by id_jurnal desc
     }
 
+    //Pagination
+    public function getJurnal($limit, $start)
+    {
+        return $this->db->get($this->table, $limit, $start)->result_array();
+    }
+
+    public function countAllJurnal()
+    {
+        return $this->db->get($this->table)->num_rows();
+    }
+
     //menyimpan data jurnal
     public function save()
     {
