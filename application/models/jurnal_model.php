@@ -52,8 +52,11 @@ class jurnal_model extends CI_Model
     }
 
     //Pagination
-    public function getJurnal($limit, $start)
+    public function getJurnal($limit, $start, $keyword = null)
     {
+        if ($keyword) {
+            $this->db->like('judul', $keyword);
+        }
         return $this->db->get($this->table, $limit, $start)->result_array();
     }
 

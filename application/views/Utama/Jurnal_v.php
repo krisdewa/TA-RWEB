@@ -1,8 +1,16 @@
 <section class="container">
     <h2 class="mt-5 mb-4">Jurnal yang tersedia</h2>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Cari Jurnal" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-primary" type="button" name="sumbit">Search</button>
+    <div class="row">
+        <div class="col-md">
+            <form action="<?= base_url('Utama') ?>" method="POST">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Cari Jurnal" name="keyword">
+                    <div class="input-groub-append">
+                        <input class="btn btn-primary" type="submit" name="submit"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
     <?php
     foreach ($data_jurnal as $d) {
