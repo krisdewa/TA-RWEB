@@ -6,13 +6,17 @@
     <?php $this->load->view('templates/header'); ?>
 </head>
 
-<body style="background-color: hsl(0, 0%, 96%)">
+<body style="background-color: #FFC18E">
     <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card bg-light p-5" >
-                    <h1 class="mb-3 text-center">LOGIN</h1>
+                    <div class="text-center mb-3">
+                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>image/logo-UAD2.png" alt="" width="200px"></a>
+                    </div>
+                    <!-- <h4 class="mb-2 text-center">LOGIN</h4> -->
+                    <h5 class="text-center mb-4 text-muted">Sign in your account</h5>
                     <div mb-2>
                         <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
                         <?php if ($this->session->flashdata('login')) :
@@ -36,37 +40,20 @@
                                 <?php echo form_error('password') ?>
                             </small>
                     </div>
-
+                    
                     <!-- Submit button -->
                     <div class="d-grid gap-2 col-15 mx-auto">
-                        <button type="submit" class="btn btn-primary btn-block mb-4">LOGIN</button>
+                        <button type="submit" class="btn btn-warning btn-block mb-4">LOGIN</button>
                     </div>
-                        
-                    <!-- Register buttons -->
-                    <!-- <div class="text-center">
-                        <p>Not a member? <a href="#!">Register</a></p>
-                        <p>or sign up with:</p>
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-facebook-f"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-google"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-twitter"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-github"></i>
-                        </button>
-                    </div> -->
+                    <div class="text-center mb-3">
+                        Dont have account? <a href="">Register Account</a>
+                    </div>
+                    <?php echo form_close(); ?>
                 </div>
             </div>
         </div>
     </section>
-    </form>
+    <!-- </form> -->
     
     <script>
     $(document).ready(function() {
