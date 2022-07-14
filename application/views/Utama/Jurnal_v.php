@@ -12,7 +12,7 @@
                 <h5 class="card-title"><?= $d['judul'] ?></h5>
                 <p class="card-text"><?= $d['penulis'] ?></p>
                 <p class="card-text"><?= substr($d['abstrak'], 1, 300) ?>........</p>
-                <a href="detail/<?= $d['id_jurnal'] ?>" class="btn btn-primary"> Selengkapnya..</a>
+                <a href="<?= base_url('/Utama/detail/' . $d['id_jurnal']) ?>" class="btn btn-primary"> Selengkapnya..</a>
             </div>
         </div>
     <?php
