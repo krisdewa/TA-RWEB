@@ -28,7 +28,7 @@ class jurnal extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menu');
         //load view index.php pada folder views/jurnal
-        $this->load->view('jurnal/index', $data);
+        $this->load->view('adminjurnal/index', $data);
         $this->load->view('templates/footer');
     }
 
@@ -53,7 +53,7 @@ class jurnal extends CI_Controller
         $data["title"] = "Tambah Data jurnal";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menu');
-        $this->load->view('jurnal/add', $data);
+        $this->load->view('adminjurnal/add', $data);
         $this->load->view('templates/footer');
     }
 
@@ -72,14 +72,14 @@ class jurnal extends CI_Controller
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>'
         );
-            redirect("index.php/jurnal");
+            redirect("jurnal");
         }
         $data["title"] = "Edit Data Jurnal";
         $data["data_jurnal"] = $jurnal->getById($id_jurnal);
         if (!$data["data_jurnal"]) show_404();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menu');
-        $this->load->view('jurnal/edit', $data);
+        $this->load->view('adminjurnal/edit', $data);
         $this->load->view('templates/footer');
     }
 
@@ -95,6 +95,6 @@ class jurnal extends CI_Controller
         </div>');
         $this->output->set_output(json_encode($msg));
         // redirect 
-        redirect('index.php/jurnal');
+        redirect('jurnal');
     }
 }

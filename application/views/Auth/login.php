@@ -23,7 +23,7 @@
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="email">Email address</label>
-                        <input type="email" id="email" name="email" class="form-control" />
+                        <input type="email" id="email" name="email" placeholder="input username or email" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('email') ?>
                             </small>
@@ -31,15 +31,17 @@
                     <!-- Password input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="password">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" />
+                        <input type="password" id="password" name="password" placeholder="input password" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('password') ?>
                             </small>
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
-
+                    <div class="d-grid gap-2 col-15 mx-auto">
+                        <button type="submit" class="btn btn-primary btn-block mb-4">LOGIN</button>
+                    </div>
+                        
                     <!-- Register buttons -->
                     <!-- <div class="text-center">
                         <p>Not a member? <a href="#!">Register</a></p>
