@@ -32,12 +32,12 @@
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Sweet Alert -->
+    <!-- Datatable -->
     <script src="cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <!--  -->
 
-    
-
+    <!-- CSS AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
 </head>
 
