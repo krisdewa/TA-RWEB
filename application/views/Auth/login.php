@@ -46,7 +46,7 @@
                         <button type="submit" class="btn btn-warning btn-block mb-4">LOGIN</button>
                     </div>
                     <div class="text-center mb-3">
-                        Dont have account? <a href="register">Register Account</a>
+                        Dont have account? <a href="Register">Register Account</a>
                     </div>
                     <?php echo form_close(); ?>
                 </div>
@@ -54,7 +54,8 @@
         </div>
     </section>
     <!-- </form> -->
-    
+
+
     <script>
     $(document).ready(function() {
         window.setTimeout(function() {
