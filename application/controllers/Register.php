@@ -1,13 +1,16 @@
-<?php 
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller {
-    public function __construct(){
+class Register extends CI_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
-            $this->load->model('register_model');//load model login
-            $this->load->library('form_validation');//load library form_validation
+        $this->load->model('register_model'); //load model login
+        $this->load->library('form_validation'); //load library form_validation
     }
-    public function index(){
+    public function index()
+    {
         $this->load->view('Auth/register'); //load view login
     }
     //method add digunakan untuk menampilkan form tambah data jurnal
@@ -21,13 +24,11 @@ class Login extends CI_Controller {
             $register->save();
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
             Register berhasil, Silahkan login untuk melanjutkan. </div>');
-        
+
             redirect("Login");
         }
 
         $data["title"] = "Register account"; //judul halaman
         $this->load->view('adminjurnal/add', $data);
-
     }
 }
-
