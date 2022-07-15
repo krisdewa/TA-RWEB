@@ -15,7 +15,7 @@
                     <div class="text-center mb-3">
                         <a href="" target="_blank"><img src="<?php echo base_url(); ?>image/logo-UAD2.png" alt="" width="200px"></a>
                     </div>
-                    <h2 class="mb-2 text-center" style="color: #FFAA85">LOGIN</h2>
+                    <h2 class="mb-2 text-center" style="color: #FFAA85">Selamat Datang</h2>
                     <!-- <h5 class="text-center mb-4 text-muted">Sign in your account</h5> -->
                     <div mb-2>
                         <!-- Menampilkan flash data (pesan saat data berhasil disimpan)-->
@@ -26,8 +26,8 @@
                     <?php echo form_open('Login/login_aksi'); ?>            
                     <!-- Email input -->
                     <div class="form-outline mb-3">
-                        <label class="form-label" for="email">Email address</label>
-                        <input type="email" id="email" name="email" placeholder="input username or email" class="form-control" />
+                        <label class="form-label" for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('email') ?>
                             </small>
@@ -35,7 +35,7 @@
                     <!-- Password input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="input password" class="form-control" />
+                        <input type="password" id="password" name="password" placeholder="Masukkan password" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('password') ?>
                             </small>
@@ -46,7 +46,7 @@
                         <button type="submit" class="btn btn-block text-light mb-4" style="background-color: #FFAA85"><b>LOGIN</b></button>
                     </div>
                     <div class="text-center mb-3" >
-                        <div class="text-dark" >Dont have account? <a class="text-decoration-none text-warning" href="Register">Register Account</a></div>
+                        <div class="text-dark" >Belum punya akun? <a class="text-decoration-none text-warning" href="Register">Register Akun</a></div>
                     </div>
                     <?php echo form_close(); ?>
                 </div>
