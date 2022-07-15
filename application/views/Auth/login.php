@@ -15,8 +15,8 @@
                     <div class="text-center mb-3">
                         <a href="" target="_blank"><img src="<?php echo base_url(); ?>image/logo-UAD2.png" alt="" width="200px"></a>
                     </div>
-                    <!-- <h4 class="mb-2 text-center">LOGIN</h4> -->
-                    <h5 class="text-center mb-4 text-muted">Sign in your account</h5>
+                    <h2 class="mb-2 text-center" style="color: #FFAA85">LOGIN</h2>
+                    <!-- <h5 class="text-center mb-4 text-muted">Sign in your account</h5> -->
                     <div mb-2>
                         <!-- Menampilkan flash data (pesan saat data berhasil disimpan)-->
                         <?php if ($this->session->flashdata('login')) :
@@ -43,10 +43,10 @@
                     
                     <!-- Submit button -->
                     <div class="d-grid gap-2 col-15 mx-auto">
-                        <button type="submit" class="btn btn-warning btn-block mb-4">LOGIN</button>
+                        <button type="submit" class="btn btn-block text-light mb-4" style="background-color: #FFAA85"><b>LOGIN</b></button>
                     </div>
-                    <div class="text-center mb-3">
-                        Dont have account? <a href="Register">Register Account</a>
+                    <div class="text-center mb-3" >
+                        <div class="text-dark" >Dont have account? <a class="text-decoration-none text-warning" href="Register">Register Account</a></div>
                     </div>
                     <?php echo form_close(); ?>
                 </div>
