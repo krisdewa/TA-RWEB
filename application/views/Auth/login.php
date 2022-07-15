@@ -18,14 +18,14 @@
                     <!-- <h4 class="mb-2 text-center">LOGIN</h4> -->
                     <h5 class="text-center mb-4 text-muted">Sign in your account</h5>
                     <div mb-2>
-                        <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
+                        <!-- Menampilkan flash data (pesan saat data berhasil disimpan)-->
                         <?php if ($this->session->flashdata('login')) :
                             echo $this->session->flashdata('login');
                         endif; ?>
                     </div>
                     <?php echo form_open('Login/login_aksi'); ?>            
                     <!-- Email input -->
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-3">
                         <label class="form-label" for="email">Email address</label>
                         <input type="email" id="email" name="email" placeholder="input username or email" class="form-control" />
                             <small class="text-danger">
@@ -46,7 +46,7 @@
                         <button type="submit" class="btn btn-warning btn-block mb-4">LOGIN</button>
                     </div>
                     <div class="text-center mb-3">
-                        Dont have account? <a href="">Register Account</a>
+                        Dont have account? <a href="register">Register Account</a>
                     </div>
                     <?php echo form_close(); ?>
                 </div>
