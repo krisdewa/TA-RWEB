@@ -6,7 +6,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Cari Skripsi...." name="keyword">
                     <div class="input-groub-append">
-                        <input class="btn btn-primary" type="submit" name="submit"></input>
+                        <input class="btn btn-light" style="background-color: #FFC18E;" type="submit" name="submit"></input>
                     </div>
                 </div>
             </form>
@@ -20,7 +20,7 @@
                 <h5 class="card-title"><?= $d['Judul'] ?></h5>
                 <p class="card-text"><?= $d['penulis'] ?></p>
                 <p class="card-text"><?= substr($d['abstrak'], 1, 300) ?>........</p>
-                <a href="<?= base_url('/Skripsi/detail/' . $d['id']) ?>" class="btn btn-primary"> Selengkapnya..</a>
+                <a href="<?= base_url('/Skripsi/detail/' . $d['id']) ?>" class="btn btn-light" style="background-color: #FFC18E;"> Selengkapnya..</a>
             </div>
         </div>
     <?php

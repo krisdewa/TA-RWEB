@@ -97,7 +97,7 @@
                     </div>
                     <div class="form-group row mb-3 ">
                         <div class="col-sm-10 offset-md-2">
-                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <button type="submit" class="btn btn-light" style="background-color: #FFC18E;">Simpan</button>
                             <a class="btn btn-secondary" href="javascript:history.back()">Kembali</a>
                         </div>
                     </div>

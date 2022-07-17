@@ -20,27 +20,27 @@
                                             echo "active";
                                         } ?>" href="<?= base_url('/Skripsi') ?>">Skripsi</a>
                 </li>
-                <?php
-                $session_login = $this->session->userdata('username');
-                if (isset($session_login)) :
-                ?>
-                    <li class="nav-item dropdown fs-5">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <?= $this->session->userdata('username') ?>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="<?= base_url('Login/logout'); ?>">Logout</a></li>
-                        </ul>
-                    </li>
-                <?php endif ?>
             </ul>
-            <?php
-                $session_login = $this->session->userdata('username');
-                if (!isset($session_login)) : ?>
-                    <span class="nav-item fs-5">
-                        <a class="nav-link text-light active" href="Login">LOGIN</a>
-                    </span>
-                <?php endif ?>
         </div>
+        <?php
+        $session_login = $this->session->userdata('username');
+        if (isset($session_login)) :
+        ?>
+            <span class="nav-item dropdown fs-5">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?= $this->session->userdata('username') ?>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="<?= base_url('Login/logout'); ?>">Logout</a></li>
+                </ul>
+            </span>
+        <?php endif ?>
+        <?php
+        $session_login = $this->session->userdata('username');
+        if (!isset($session_login)) : ?>
+            <span class="nav-item fs-5">
+                <a class="nav-link text-light active" href="Login">LOGIN</a>
+            </span>
+        <?php endif ?>
     </div>
 </nav>

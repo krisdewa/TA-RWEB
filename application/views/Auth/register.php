@@ -61,7 +61,7 @@
                         <div class="d-grid gap-2 col-15 mx-auto">
                             <button type="submit" class="btn btn-block text-light mb-4" style="background-color: #FFAA85">REGISTER</button>
                         </div>
-                        <div class="text-center mb-3">
+                        <div class="text-center mb-0">
                             <div class="text-dark">Sudah punya akun? <a class="text-decoration-none text-warning" href="login">Klik Disini</a></div>
                         </div>
                         <?php echo form_close(); ?>

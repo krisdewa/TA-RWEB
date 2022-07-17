@@ -20,7 +20,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <a class="btn btn-primary mb-3 font-weight-bold" href="<?= base_url('jurnal/add'); ?>">TAMBAH JURNAL</a>
+                    <a class="btn btn-light mb-3 font-weight-bold" style="background-color: #FFC18E;" href="<?= base_url('jurnal/add'); ?>">TAMBAH JURNAL</a>
                     <div mb-2>
                         <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
                         <?php if ($this->session->flashdata('message')) :
