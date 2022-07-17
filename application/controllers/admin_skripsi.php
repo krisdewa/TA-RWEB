@@ -60,6 +60,7 @@ class admin_skripsi extends CI_Controller
 
     public function edit_skripsi($id = null)
     {
+        
         if (!isset($id)) redirect('admin_skripsi');
 
         $skripsi = $this->skripsi_model;
@@ -76,6 +77,7 @@ class admin_skripsi extends CI_Controller
             </div>'
             );
             redirect("admin_skripsi");
+            
         }
 
         $data["title"] = "Edit Data Skripsi";

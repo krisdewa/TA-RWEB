@@ -45,7 +45,7 @@
                             <button type="submit" class="btn btn-block text-light mb-4" style="background-color: #FFAA85"><b>LOGIN</b></button>
                         </div>
                         <div class="text-center mb-3">
-                            <div class="text-dark">Belum punya akun? <a class="text-decoration-none text-warning" href="register">Register Akun</a></div>
+                            <div class="text-dark">Belum punya akun? <a class="text-decoration-none text-warning" href="<?php echo base_url(); ?>register">Register Akun</a></div>
                         </div>
                         <?php echo form_close(); ?>
                     </div>

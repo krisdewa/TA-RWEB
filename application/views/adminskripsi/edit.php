@@ -5,28 +5,28 @@
         <!-- Breadcrumb -->
         <nav class="d-flex">
             <ol class="breadcrumb ">
-                <li class="breadcrumb-item"><a>Jurnal</a></li>
-                <li class="breadcrumb-item "><a href="<?= base_url('jurnal'); ?>">List Data</a></li>
+                <li class="breadcrumb-item"><a>Skripsi</a></li>
+                <li class="breadcrumb-item "><a href="<?= base_url('admin_skripsi'); ?>">List Data</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Edit Data</li>
             </ol>
         </nav>
         <!-- Breadcrumb -->
     </div>
+    <?php validation_errors(); ?>
     <!-- Heading -->
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
                     <?php
-
-                    $attributes = array('id_jurnal' => 'FrmEditJurnal', 'method' => "post", "autocomplete" => "off");
-                    echo form_open_multipart('admin_skripsi/edit_skripsi', $attributes);
+                    $attributes = array('id' => 'FrmEditSkripsi', 'method' => "post", "autocomplete" => "off");
+                    echo form_open_multipart('', $attributes);
                     ?>
                     <div class="form-group row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                         <div class="col-sm-10">
                             <input type="hidden" class="form-control" name="id" value=" <?= $edit_skripsi->id; ?>">
-                            <input type="text" class="form-control" name="judul" value=" <?= $edit_skripsi->Judul; ?>">
+                            <input type="text" class="form-control" name="Judul" value="<?= $edit_skripsi->Judul; ?>">
                             <small class="text-danger">
                                 <?php echo form_error('judul') ?>
                             </small>

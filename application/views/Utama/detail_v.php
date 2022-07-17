@@ -38,7 +38,7 @@
     if (!isset($session_login)) :
     ?>
         <div class="alert alert-warning" role="alert">
-            Untuk melakukan download silahkan <a href="/login" class="alert-link">Login</a> terlebih dahulu !!!
+            Untuk melakukan download silahkan <a href="<?php echo base_url(); ?>Login" class="alert-link">Login</a> terlebih dahulu !!!
         </div>
     <?php endif ?>
     <?php
