@@ -20,7 +20,7 @@
                     <?php
                     //create form
                     $attributes = array('id' => 'FrmAddSkripsi', 'method' => "post", "autocomplete" => "off",);
-                    echo form_open('', $attributes);
+                    echo form_open_multipart('', $attributes);
                     ?>
                     <div class="form-group row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">judul</label>
@@ -87,6 +87,12 @@
                             <small class="text-danger">
                                 <?php echo form_error('abstrak') ?>
                             </small>
+                        </div>
+                    </div>
+                    <div class="input-group row mb-3">
+                        <label for="tahun" class="col-sm-2 col-form-label">File</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="file_skripsi">
                         </div>
                     </div>
                     <div class="form-group row mb-3 ">

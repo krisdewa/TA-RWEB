@@ -20,7 +20,7 @@
                     <?php
                     //create form
                     $attributes = array('id_jurnal' => 'FrmEditJurnal', 'method' => "post", "autocomplete" => "off");
-                    echo form_open('', $attributes);
+                    echo form_open('admin_skripsi/edit', $attributes);
                     ?>
                     <div class="form-group row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">Judul</label>

@@ -94,13 +94,24 @@ class jurnal_model extends CI_Model
     //edit data jurnal
     public function update()
     {
+        $config = [
+            'upload_path' => './upload/jurnal',
+            'allowed_types' => 'pdf',
+            'max_size' => '3000'
+        ];
+
+        $this->load->library('upload', $config);
+        $this->upload->do_upload('file_jurnal');
+        $filedata = $this->upload->data();
+
         $data = array(
             "judul" => $this->input->post('judul'),
             "penulis" => $this->input->post('penulis'),
             "penerbit" => $this->input->post('penerbit'),
             "edisi" => $this->input->post('edisi'),
             "abstrak" => $this->input->post('abstrak'),
-            "tahun" => $this->input->post('tahun')
+            "tahun" => $this->input->post('tahun'),
+            "file" => $filedata['file_name']
         );
         return $this->db->update($this->table, $data, array('id_jurnal' => $this->input->post('id_jurnal')));
     }

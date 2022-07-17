@@ -24,11 +24,25 @@
                         ?>
                         <!-- </div> -->
 
-                        <?php echo form_open('Register/register_aksi'); ?>
+                        <?php echo form_open('Register/add_account'); ?>
                         <!-- Email input -->
                         <div class="form-outline mb-4">
+                            <label class="form-label" for="email">NIM</label>
+                            <input type="number" id="nama" name="nim" placeholder="input NIM" class="form-control" />
+                            <small class="text-danger">
+                                <?php echo form_error('nama') ?>
+                            </small>
+                        </div>
+                        <div class="form-outline mb-4">
                             <label class="form-label" for="email">Nama</label>
-                            <input type="nama" id="nama" name="nama" placeholder="input nama" class="form-control" />
+                            <input type="text" id="nama" name="nama" placeholder="input nama" class="form-control" />
+                            <small class="text-danger">
+                                <?php echo form_error('nama') ?>
+                            </small>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="email">Username</label>
+                            <input type="text" id="nama" name="username" placeholder="input Username" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('nama') ?>
                             </small>

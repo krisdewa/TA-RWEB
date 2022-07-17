@@ -73,13 +73,24 @@ class skripsi_model extends CI_Model
     //menyimpan data jurnal
     public function save()
     {
+        $config = [
+            'upload_path' => './upload/skripsi',
+            'allowed_types' => 'pdf',
+            'max_size' => '3000'
+        ];
+
+        $this->load->library('upload', $config);
+        $this->upload->do_upload('file_skripsi');
+        $filedata = $this->upload->data();
+
         $data = array(
             "Judul" => $this->input->post('Judul'),
             "penulis" => $this->input->post('penulis'),
             "penerbit" => $this->input->post('penerbit'),
             "jenis_penelitian" => $this->input->post('jenis'),
             "abstrak" => $this->input->post('abstrak'),
-            "tahun" => $this->input->post('tahun')
+            "tahun" => $this->input->post('tahun'),
+            "file" => $filedata['file_name']
         );
         return $this->db->insert($this->table, $data);
     }

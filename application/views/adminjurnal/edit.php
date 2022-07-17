@@ -20,7 +20,7 @@
                     <?php
                     //create form
                     $attributes = array('id_jurnal' => 'FrmEditJurnal', 'method' => "post", "autocomplete" => "off");
-                    echo form_open('', $attributes);
+                    echo form_open_multipart('', $attributes);
                     ?>
                     <div class="form-group row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">Judul</label>
@@ -89,9 +89,11 @@
                             </small>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+                    <div class="input-group row mb-3">
+                        <label for="tahun" class="col-sm-2 col-form-label">File</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="file_jurnal">
+                        </div>
                     </div>
                     <div class="form-group row mb-3">
                         <div class="col-sm-10 offset-md-2">
