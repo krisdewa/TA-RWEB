@@ -17,7 +17,7 @@ class register_model extends CI_Model
             [
                 'field' => 'email',
                 'label' => 'email',
-                'rules' => 'trim|required'
+                'rules' => 'trim|required|valid_email|is_unique[user.email]'
             ],
             [
                 'field' => 'password',
