@@ -24,7 +24,7 @@
                 $session_login = $this->session->userdata('username');
                 if (!isset($session_login)) : ?>
                     <li class="nav-item fs-5">
-                        <a class="nav-link active" href="/login">login</a>
+                        <a class="nav-link active" href="Login">login</a>
                     </li>
                 <?php endif ?>
                 <?php
