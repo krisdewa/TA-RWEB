@@ -44,7 +44,7 @@ class Login extends CI_Controller
                     $this->session->set_flashdata('login', '<div class="alert alert-success alert-dismissible fade show" role="alert"> 
                     Selamat Datang Di Website Sistem Informasi Jurnal </div>');
 
-                    redirect("utama");
+                    redirect("beranda");
                 }
             } else {
                 // echo "Gagal Login";
