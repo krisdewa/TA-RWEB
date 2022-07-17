@@ -14,8 +14,7 @@
 			<h2 data-aos="fade-up" data-aos-duration="3000">Selamat Datang Di Website</h2>
 			<h4 class="text-light" data-aos="fade-up" data-aos-duration="3000">Sistem Informasi Jurnal dan Skripsi <br> Prodi
 				Informatika</h4>
-			<p class="desk col-md-5" data-aos="fade-up" data-aos-duration="3000">Jangan khawatir, kami akan selalu ada 24 jam
-				melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</> <br>
+			<p class="desk col-md-7" data-aos="fade-up" data-aos-duration="3000">Visi: Menjadi Pustaka Perguruan Tinggi  yang modern berbasis teknologi informasi dengan pelayanan yang cepat, tepat dan mudah. <br>
 				<p data-aos="fade-up" data-aos-duration="3000"><a href="Utama" class="telusuri">Selengkapnya</a></p>
 		</div>
 		<div class="col-md-4">
