@@ -9,6 +9,7 @@ class Skripsi extends CI_Controller
         parent::__construct();
         $this->load->model('skripsi_model');
         $this->load->library('pagination');
+        $this->load->helper('download');
 
         header('Cache-Control: no-cache, must-revalidate, max-age=0');
         header('Cache-Control: post-check=0, pre-check=0', false);
@@ -61,5 +62,12 @@ class Skripsi extends CI_Controller
         $this->load->view("Utama/templates/navbar");
         $this->load->view("Utama/detailSkripsi_v", $data);
         $this->load->view("Utama/templates/footer");
+    }
+
+    public function download($id = null)
+    {
+        $data = $this->db->get_where('skripsi', ['id' => $id])->row();
+        $path = './upload/skripsi/' .  $data->file;
+        force_download($path, NULL);
     }
 }

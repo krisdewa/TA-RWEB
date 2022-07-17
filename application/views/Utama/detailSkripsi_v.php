@@ -7,6 +7,6 @@
     $session_login = $this->session->userdata('nama');
     if (isset($session_login)) :
     ?>
-        <button class="btn btn-primary">Download</button>
+        <a href="<?= base_url('Skripsi/download/' . $detail_skripsi->id) ?>" class="btn btn-primary">Download</a>
     <?php endif ?>
 </section>
