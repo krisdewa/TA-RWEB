@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Assistant;
+	background: #ffffff;
+}
+
+section {
+	margin: auto;
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.home {
+
+	background: #FFC18E;
+
+}
+
+.kolom1 {
+	/* margin-top: 50px; */
+	margin-bottom: 50px;
+}
+
+.kolom2 {
+	margin-top: 50px;
+	/* margin-bottom: 50px; */
+	margin-left: 200px;
+}
+
+.kolom .deskripsi {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "comic sans ms";
+	color: #ff4f5a;
+}
+
+.top {
+	margin-top: 90px;
+}
+
+h2 {
+	font-family: Assistant;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 33px;
+
+	margin-top: -20px;
+	margin-bottom: 20px;
+	color: #FFFFFF;
+	width: 100%;
+	line-height: 50px;
+}
+
+h2.h22 {
+	font-family: Assistant;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 33px;
+
+	margin-top: -20px;
+	margin-bottom: 20px;
+	color: #FFC18E;
+	width: 100%;
+	line-height: 50px;
+}
+
+.gambar {
+	margin-top: -130px;
+}
+
+a.telusuri {
+	background: #FFFFFF;
+	border-radius: 20px;
+	margin-top: 20px;
+	padding: 10px 10px 10px 10px;
+	color: #FFC18E;
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.telusuri2 {
+	background: #FFC18E;
+	border-radius: 20px;
+	margin-top: 20px;
+	padding: 10px 10px 10px 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.telusuri2:hover {
+	background: #fdd0ab;
+	text-decoration: none;
+}
+
+p {
+	margin: 10px 0px 10px 0px;
+	padding: 10px 0px 10px 0px;
+}
