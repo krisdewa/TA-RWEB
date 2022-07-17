@@ -25,6 +25,16 @@ class jurnal_model extends CI_Model
                 'rules' => 'trim|required'
             ],
             [
+                'field' => 'edisi',
+                'label' => 'edisi',
+                'rules' => 'trim|required'
+            ],
+            [
+                'field' => 'abstrak',
+                'label' => 'abstrak',
+                'rules' => 'trim|required'
+            ],
+            [
                 'field' => 'tahun',
                 'label' => 'tahun',
                 'rules' => 'trim|required|numeric|min_length[4]|max_length[4]'

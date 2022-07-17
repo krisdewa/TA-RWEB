@@ -21,7 +21,7 @@ class admin_skripsi extends CI_Controller
     public function index()
     {
 
-        $data["title"] = "List Data Jurnal";
+        $data["title"] = "List Data Skripsi";
         //ambil fungsi getAll untuk menampilkan semua data jurnal
         $data["data_skripsi"] = $this->skripsi_model->getAll();
         //load view header.php pada folder views/templates
@@ -77,6 +77,7 @@ class admin_skripsi extends CI_Controller
             );
             redirect("admin_skripsi");
         }
+
         $data["title"] = "Edit Data Skripsi";
         $data["edit_skripsi"] = $skripsi->getById($id);
         if (!$data["edit_skripsi"]) show_404();
@@ -99,6 +100,6 @@ class admin_skripsi extends CI_Controller
         </div>');
         $this->output->set_output(json_encode($msg));
         // redirect 
-        redirect('jurnal');
+        redirect('admin_skripsi');
     }
 }

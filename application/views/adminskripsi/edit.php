@@ -19,13 +19,13 @@
                 <div class="card-body">
                     <?php
                     //create form
-                    $attributes = array('id_jurnal' => 'FrmEditJurnal', 'method' => "post", "autocomplete" => "off");
-                    echo form_open('admin_skripsi/edit', $attributes);
+                    $attributes = array('id' => 'formedit', 'method' => "post", "autocomplete" => "off");
+                    echo form_open_multipart('admin_skripsi/edit', $attributes);
                     ?>
                     <div class="form-group row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                         <div class="col-sm-10">
-                            <input type="hidden" class="form-control" name="id_jurnal" value=" <?= $edit_skripsi->id; ?>">
+                            <input type="hidden" class="form-control" name="id" value=" <?= $edit_skripsi->id; ?>">
                             <input type="text" class="form-control" name="judul" value=" <?= $edit_skripsi->Judul; ?>">
                             <small class="text-danger">
                                 <?php echo form_error('judul') ?>
@@ -87,6 +87,12 @@
                             <small class="text-danger">
                                 <?php echo form_error('abstrak') ?>
                             </small>
+                        </div>
+                    </div>
+                    <div class="input-group row mb-3">
+                        <label for="tahun" class="col-sm-2 col-form-label">File</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="file_skripsi">
                         </div>
                     </div>
                     <div class="form-group row mb-3 ">

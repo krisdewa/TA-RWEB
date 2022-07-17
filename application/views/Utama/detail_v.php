@@ -35,6 +35,14 @@
     <hr>
     <?php
     $session_login = $this->session->userdata('nama');
+    if (!isset($session_login)) :
+    ?>
+        <div class="alert alert-warning" role="alert">
+            Untuk melakukan download silahkan <a href="/login" class="alert-link">Login</a> terlebih dahulu !!!
+        </div>
+    <?php endif ?>
+    <?php
+    $session_login = $this->session->userdata('nama');
     if (isset($session_login)) :
     ?>
         <a class="btn btn-primary" href="<?= base_url('Utama/download/' . $data_detail->id_jurnal) ?>">Download</a>

@@ -10,8 +10,18 @@ class register_model extends CI_Model
     {
         return [
             [
+                'field' => 'nim',  //samakan dengan atribute name pada tags input
+                'label' => 'nim',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required|numeric' //rules validasi
+            ],
+            [
                 'field' => 'nama',  //samakan dengan atribute name pada tags input
                 'label' => 'nama',  // label yang kan ditampilkan pada pesan error
+                'rules' => 'trim|required' //rules validasi
+            ],
+            [
+                'field' => 'username',  //samakan dengan atribute name pada tags input
+                'label' => 'username',  // label yang kan ditampilkan pada pesan error
                 'rules' => 'trim|required' //rules validasi
             ],
             [
