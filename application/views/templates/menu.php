@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-md bg-warning">
     <div class="container">
         <!-- Brand -->
@@ -14,6 +13,9 @@
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="<?= base_url('jurnal'); ?>">Jurnal</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="<?= base_url('admin_skripsi'); ?>">Skripsi</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="<//?= base_url('Login/logout'); ?>">LOGOUT</a>

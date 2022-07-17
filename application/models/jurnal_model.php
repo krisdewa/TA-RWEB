@@ -68,12 +68,26 @@ class jurnal_model extends CI_Model
     //menyimpan data jurnal
     public function save()
     {
+        $config = [
+            'upload_path' => './upload/jurnal',
+            'allowed_types' => 'pdf',
+            'max_size' => '3000'
+        ];
+
+        $this->load->library('upload', $config);
+        $this->upload->do_upload('file_jurnal');
+        $filedata = $this->upload->data();
+
         $data = array(
             "judul" => $this->input->post('judul'),
             "penulis" => $this->input->post('penulis'),
             "penerbit" => $this->input->post('penerbit'),
-            "tahun" => $this->input->post('tahun')
+            "edisi" => $this->input->post('edisi'),
+            "abstrak" => $this->input->post('abstrak'),
+            "tahun" => $this->input->post('tahun'),
+            "file" => $filedata['file_name']
         );
+
         return $this->db->insert($this->table, $data);
     }
 
@@ -84,6 +98,8 @@ class jurnal_model extends CI_Model
             "judul" => $this->input->post('judul'),
             "penulis" => $this->input->post('penulis'),
             "penerbit" => $this->input->post('penerbit'),
+            "edisi" => $this->input->post('edisi'),
+            "abstrak" => $this->input->post('abstrak'),
             "tahun" => $this->input->post('tahun')
         );
         return $this->db->update($this->table, $data, array('id_jurnal' => $this->input->post('id_jurnal')));

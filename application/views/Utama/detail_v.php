@@ -7,6 +7,6 @@
     $session_login = $this->session->userdata('nama');
     if (isset($session_login)) :
     ?>
-        <button class="btn btn-primary">Download</button>
+        <a href="<?= base_url('Utama/download/' . $data_detail->id_jurnal) ?>">Download</a>
     <?php endif ?>
 </section>

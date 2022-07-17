@@ -1,4 +1,4 @@
-<div class="container pt-5 mb-5">
+<div class="container pt-5">
     <!-- Heading -->
     <div class="p-2 bg-light mb-3 border rounded">
         <h1 class=""><?= $title ?></h1>
@@ -7,7 +7,7 @@
             <ol class="breadcrumb ">
                 <li class="breadcrumb-item"><a>Jurnal</a></li>
                 <li class="breadcrumb-item "><a href="<?= base_url('jurnal'); ?>">List Data</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edit Data</li>
+                <li class="breadcrumb-item active" aria-current="page">Add Data</li>
             </ol>
         </nav>
         <!-- Breadcrumb -->
@@ -19,23 +19,22 @@
                 <div class="card-body">
                     <?php
                     //create form
-                    $attributes = array('id_jurnal' => 'FrmEditJurnal', 'method' => "post", "autocomplete" => "off");
+                    $attributes = array('id' => 'FrmAddSkripsi', 'method' => "post", "autocomplete" => "off",);
                     echo form_open('', $attributes);
                     ?>
                     <div class="form-group row mb-3">
-                        <label for="judul" class="col-sm-2 col-form-label">Judul</label>
+                        <label for="judul" class="col-sm-2 col-form-label">judul</label>
                         <div class="col-sm-10">
-                            <input type="hidden" class="form-control" id="id_jurnal" name="id_jurnal" value=" <?= $data_jurnal->id_jurnal; ?>">
-                            <input type="text" class="form-control" id="judul" name="judul" value=" <?= $data_jurnal->judul; ?>">
+                            <input type="text" class="form-control" id="Judul" name="Judul" value="<?= set_value('Judul'); ?>">
                             <small class="text-danger">
-                                <?php echo form_error('judul') ?>
+                                <?php echo form_error('Judul') ?>
                             </small>
                         </div>
                     </div>
                     <div class="form-group row mb-3">
                         <label for="penulis" class="col-sm-2 col-form-label">Penulis</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="penulis" name="penulis" value="<?= $data_jurnal->penulis; ?>">
+                            <input class="form-control" id="penulis" name="penulis" rows="3"><?= set_value('penulis'); ?></input>
                             <small class="text-danger">
                                 <?php echo form_error('penulis') ?>
                             </small>
@@ -44,35 +43,36 @@
                     <div class="form-group row mb-3">
                         <label for="penerbit" class="col-sm-2 col-form-label">Penerbit</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="penerbit" name="penerbit" value="<?= $data_jurnal->penerbit; ?>">
+                            <input type="text" class="form-control" id="penerbit" name="penerbit" value="<?= set_value('penerbit'); ?>">
                             <small class="text-danger">
                                 <?php echo form_error('penerbit') ?>
                             </small>
                         </div>
                     </div>
                     <div class="form-group row mb-3">
-                        <label for="penerbit" class="col-sm-2 col-form-label">Edisi</label>
+                        <label for="penerbit" class="col-sm-2 col-form-label">Jenis Penelitian</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="penerbit" name="edisi" value="<?= $data_jurnal->edisi; ?>">
+                            <input type="text" class="form-control" id="penerbit" name="jenis" value="<?= set_value('jenis'); ?>">
                             <small class="text-danger">
-                                <?php echo form_error('edisi') ?>
+                                <?php echo form_error('jenis') ?>
                             </small>
                         </div>
                     </div>
                     <div class="form-group row mb-3">
                         <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2
+                        ">
                             <select class="form-select" id="tahun" name="tahun">
                                 <option value="2022" selected disabled>Pilih</option>
-                                <option value="2022" <?php if ($data_jurnal->tahun == "2022") : echo "selected";
+                                <option value="2022" <?php if (set_value('tahun') == "2022") : echo "selected";
                                                         endif; ?>>2022</option>
-                                <option value="2021" <?php if ($data_jurnal->tahun == "2021") : echo "selected";
+                                <option value="2021" <?php if (set_value('tahun') == "2021") : echo "selected";
                                                         endif; ?>>2021</option>
-                                <option value="2020" <?php if ($data_jurnal->tahun == "2020") : echo "selected";
+                                <option value="2020" <?php if (set_value('tahun') == "2020") : echo "selected";
                                                         endif; ?>>2020</option>
-                                <option value="2019" <?php if ($data_jurnal->tahun == "2019") : echo "selected";
+                                <option value="2019" <?php if (set_value('tahun') == "2019") : echo "selected";
                                                         endif; ?>>2019</option>
-                                <option value="2018" <?php if ($data_jurnal->tahun == "2018") : echo "selected";
+                                <option value="2018" <?php if (set_value('tahun') == "2018") : echo "selected";
                                                         endif; ?>>2018</option>
                             </select>
                             <small class="text-danger">
@@ -83,17 +83,13 @@
                     <div class="mb-3 row form-groub">
                         <label for="tahun" class="col-sm-2 col-form-label">Abstrak</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" name="abstrak" rows="3"><?= $data_jurnal->abstrak; ?></textarea>
+                            <textarea class="form-control" name="abstrak" rows="3"></textarea>
                             <small class="text-danger">
                                 <?php echo form_error('abstrak') ?>
                             </small>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
-                    </div>
-                    <div class="form-group row mb-3">
+                    <div class="form-group row mb-3 ">
                         <div class="col-sm-10 offset-md-2">
                             <button type="submit" class="btn btn-primary">Simpan</button>
                             <a class="btn btn-secondary" href="javascript:history.back()">Kembali</a>

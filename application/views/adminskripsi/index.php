@@ -20,7 +20,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <a class="btn btn-primary mb-3 font-weight-bold" href="<?= base_url('jurnal/add'); ?>">TAMBAH JURNAL</a>
+                    <a class="btn btn-primary mb-3 font-weight-bold" href="<?= base_url('admin_skripsi/add'); ?>">TAMBAH JURNAL</a>
                     <div mb-2>
                         <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
                         <?php if ($this->session->flashdata('message')) :
@@ -40,15 +40,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($data_jurnal as $row) : ?>
+                                <?php foreach ($data_skripsi as $d) : ?>
                                     <tr>
-                                        <td><?= $row->judul ?></td>
-                                        <td><?= $row->penulis ?></td>
-                                        <td><?= $row->penerbit ?></td>
-                                        <td><?= $row->tahun ?></td>
+                                        <td><?= $d['Judul'] ?></td>
+                                        <td><?= $d['penulis'] ?></td>
+                                        <td><?= $d['penerbit'] ?></td>
+                                        <td><?= $d['tahun'] ?></td>
                                         <td>
-                                            <a href="<?= site_url('jurnal/edit/' . $row->id_jurnal) ?>" class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i> </a>
-                                            <a href="<?= site_url('jurnal/delete/' . $row->id_jurnal) ?>" data="<?= $row->id_jurnal ?>" class="btn btn-danger btn-sm item-delete"><i class="bi bi-trash"></i> </a>
+                                            <a href="<?= site_url('admin_skripsi/edit/' . $d['id']) ?>" class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i> </a>
+                                            <a href="<?= site_url('admin_skripsi/delete/' . $d['id']) ?>" data="<?= $d['id'] ?>" class="btn btn-danger btn-sm item-delete"><i class="bi bi-trash"></i> </a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

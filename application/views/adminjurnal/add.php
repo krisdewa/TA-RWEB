@@ -20,7 +20,7 @@
                     <?php
                     //create form
                     $attributes = array('id_jurnal' => 'FrmAddJurnal', 'method' => "post", "autocomplete" => "off",);
-                    echo form_open('', $attributes);
+                    echo form_open_multipart('', $attributes);
                     ?>
                     <div class="form-group row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">judul</label>
@@ -50,6 +50,15 @@
                         </div>
                     </div>
                     <div class="form-group row mb-3">
+                        <label for="penerbit" class="col-sm-2 col-form-label">Edisi</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="penerbit" name="edisi" value="<?= set_value('edisi'); ?>">
+                            <small class="text-danger">
+                                <?php echo form_error('edisi') ?>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
                         <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
                         <div class="col-sm-2
                         ">
@@ -58,7 +67,7 @@
                                 <option value="2022" <?php if (set_value('tahun') == "2022") : echo "selected";
                                                         endif; ?>>2022</option>
                                 <option value="2021" <?php if (set_value('tahun') == "2021") : echo "selected";
-                                                            endif; ?>>2021</option>
+                                                        endif; ?>>2021</option>
                                 <option value="2020" <?php if (set_value('tahun') == "2020") : echo "selected";
                                                         endif; ?>>2020</option>
                                 <option value="2019" <?php if (set_value('tahun') == "2019") : echo "selected";
@@ -69,6 +78,21 @@
                             <small class="text-danger">
                                 <?php echo form_error('tahun') ?>
                             </small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row form-groub">
+                        <label for="tahun" class="col-sm-2 col-form-label">Abstrak</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="abstrak" rows="3"></textarea>
+                            <small class="text-danger">
+                                <?php echo form_error('abstrak') ?>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="input-group row mb-3">
+                        <label for="tahun" class="col-sm-2 col-form-label">File</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="file_jurnal">
                         </div>
                     </div>
                     <div class="form-group row mb-3 ">

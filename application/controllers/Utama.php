@@ -7,6 +7,7 @@ class Utama extends CI_Controller
         parent::__construct();
         $this->load->model("jurnal_model");
         $this->load->library('pagination');
+        $this->load->helper('download');
 
         header('Cache-Control: no-cache, must-revalidate, max-age=0');
         header('Cache-Control: post-check=0, pre-check=0', false);
@@ -30,8 +31,7 @@ class Utama extends CI_Controller
         $config = [
 
             'total_rows' => $this->db->count_all_results(),
-            'per_page' => 4,
-            'use_page_numbers' => TRUE,
+            'per_page' => 4
 
         ];
 
@@ -63,5 +63,12 @@ class Utama extends CI_Controller
         $this->load->view("Utama/templates/navbar");
         $this->load->view("Utama/detail_v", $data);
         $this->load->view("Utama/templates/footer");
+    }
+
+    public function download($id = null)
+    {
+        $data = $this->db->get_where('jurnal', ['id_jurnal' => $id])->row();
+        $path = './upload/jurnal/' .  $data->file;
+        force_download($path, NULL);
     }
 }
