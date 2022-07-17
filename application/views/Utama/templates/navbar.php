@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item fs-5">
                     <a class="nav-link <?php if ($this->uri->segment(1) == "Beranda") {
                                             echo "active";
@@ -22,13 +22,6 @@
                 </li>
                 <?php
                 $session_login = $this->session->userdata('username');
-                if (!isset($session_login)) : ?>
-                    <li class="nav-item fs-5">
-                        <a class="nav-link active" href="Login">login</a>
-                    </li>
-                <?php endif ?>
-                <?php
-                $session_login = $this->session->userdata('username');
                 if (isset($session_login)) :
                 ?>
                     <li class="nav-item dropdown fs-5">
@@ -41,6 +34,13 @@
                     </li>
                 <?php endif ?>
             </ul>
+            <?php
+                $session_login = $this->session->userdata('username');
+                if (!isset($session_login)) : ?>
+                    <span class="nav-item fs-5">
+                        <a class="nav-link text-light active" href="Login">LOGIN</a>
+                    </span>
+                <?php endif ?>
         </div>
     </div>
 </nav>
