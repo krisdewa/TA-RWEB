@@ -15,8 +15,7 @@
                         <div class="text-center mb-3">
                             <a href="" target="_blank"><img src="<?php echo base_url(); ?>image/logo-UAD2.png" alt="" width="200px"></a>
                         </div>
-                        <h2 class="mb-2 text-center" style="color: #FFAA85">Selamat Datang</h2>
-                        <!-- <h5 class="text-center mb-4 text-muted">Sign in your account</h5> -->
+                        <h4 class="mb-2 text-center" style="color: #FFAA85">Selamat Datang</h4>
                         <div mb-2>
                             <!-- Menampilkan flash data (pesan saat data berhasil disimpan)-->
                             <?php if ($this->session->flashdata('login')) :
