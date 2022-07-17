@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md" style="background-color: #FFC18E;">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="jurnal">Aplikasi Jurnal</a>
+        <a class="navbar-brand" href="jurnal">Dashboard Admin Website</a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -10,16 +10,13 @@
 
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="<?= base_url('jurnal'); ?>">Jurnal</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="<?= base_url('admin_skripsi'); ?>">Skripsi</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="<//?= base_url('Login/logout'); ?>">LOGOUT</a>
-                </li> -->
             </ul>
         </div>
         <?php
