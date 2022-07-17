@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-warning">
+<nav class="navbar navbar-expand-md" style="background-color: #FFC18E;">
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand" href="jurnal">Aplikasi Jurnal</a>
@@ -22,8 +22,25 @@
                 </li> -->
             </ul>
         </div>
-        <span class="navbar-text">
-            <a class="nav-item mr-3 nav-link p-2" href="<?= base_url('Login/logout'); ?>">LOGOUT</a>
-        </span>
+        <?php
+        $session_login = $this->session->userdata('username');
+        if (!isset($session_login)) : ?>
+            <span class="nav-text">
+                <a class="nav-link active" href="Login">login</a>
+            </span>
+        <?php endif ?>
+        <?php
+        $session_login = $this->session->userdata('username');
+        if (isset($session_login)) :
+        ?>
+            <span class="nav-item dropdown fs-5">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?= $this->session->userdata('username') ?>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="<?= base_url('Login/logout'); ?>">Logout</a></li>
+                </ul>
+            </span>
+        <?php endif ?>
     </div>
 </nav>
