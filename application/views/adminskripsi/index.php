@@ -47,7 +47,7 @@
                                         <td><?= $d['penerbit'] ?></td>
                                         <td><?= $d['tahun'] ?></td>
                                         <td>
-                                            <a href="<?= site_url('admin_skripsi/edit/' . $d['id']) ?>" class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i> </a>
+                                            <a href="<?= site_url('admin_skripsi/edit_skripsi/' . $d['id']) ?>" class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i> </a>
                                             <a href="<?= site_url('admin_skripsi/delete/' . $d['id']) ?>" data="<?= $d['id'] ?>" class="btn btn-danger btn-sm item-delete"><i class="bi bi-trash"></i> </a>
                                         </td>
                                     </tr>

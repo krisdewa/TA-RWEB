@@ -39,7 +39,7 @@
         $session_login = $this->session->userdata('username');
         if (!isset($session_login)) : ?>
             <span class="nav-item fs-5">
-                <a class="nav-link text-light active" href="Login">LOGIN</a>
+                <a class="nav-link text-light active" href="<?= base_url('Login/') ?>">LOGIN</a>
             </span>
         <?php endif ?>
     </div>

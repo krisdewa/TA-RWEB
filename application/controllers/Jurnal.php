@@ -77,6 +77,7 @@ class jurnal extends CI_Controller
             );
             redirect("jurnal");
         }
+
         $data["title"] = "Edit Data Jurnal";
         $data["data_jurnal"] = $jurnal->getById($id_jurnal);
         if (!$data["data_jurnal"]) show_404();

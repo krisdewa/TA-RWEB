@@ -18,9 +18,9 @@
             <div class="card">
                 <div class="card-body">
                     <?php
-                    //create form
-                    $attributes = array('id' => 'formedit', 'method' => "post", "autocomplete" => "off");
-                    echo form_open_multipart('admin_skripsi/edit', $attributes);
+
+                    $attributes = array('id_jurnal' => 'FrmEditJurnal', 'method' => "post", "autocomplete" => "off");
+                    echo form_open_multipart('admin_skripsi/edit_skripsi', $attributes);
                     ?>
                     <div class="form-group row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">Judul</label>

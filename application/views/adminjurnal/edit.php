@@ -53,7 +53,7 @@
                     <div class="form-group row mb-3">
                         <label for="penerbit" class="col-sm-2 col-form-label">Edisi</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="penerbit" name="edisi" value="<?= $data_jurnal->edisi; ?>">
+                            <input type="text" class="form-control" id="penerbit" name="edisi" value="<?= $data_jurnal->edisi ?>">
                             <small class="text-danger">
                                 <?php echo form_error('edisi') ?>
                             </small>

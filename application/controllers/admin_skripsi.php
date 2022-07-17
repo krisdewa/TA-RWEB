@@ -58,7 +58,7 @@ class admin_skripsi extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function edit($id = null)
+    public function edit_skripsi($id = null)
     {
         if (!isset($id)) redirect('admin_skripsi');
 

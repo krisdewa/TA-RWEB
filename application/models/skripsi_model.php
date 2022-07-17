@@ -118,7 +118,9 @@ class skripsi_model extends CI_Model
             "file" => $filedata['file_name']
         );
 
-        return $this->db->update($this->table, $data, array('id' => $this->input->post('id')));
+        return var_dump($data);
+
+        // return $this->db->update($this->table, $data, array('id' => $this->input->post('id')));
     }
 
     //hapus data jurnal
