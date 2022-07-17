@@ -21,7 +21,7 @@ class Login extends CI_Controller
             'password' => $this->input->post('password')
         );
 
-        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]');
 
         if ($this->form_validation->run() != false) {
