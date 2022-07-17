@@ -6,7 +6,7 @@
                 <p class="text-light">Website ini  digunakan untuk memudahkan kita sebagai mahasiswa universitas ahmad dahlan prodi teknik informatika untk mengakses jurnal dan Skripsi yang sudah dibuat.</p>
                 </a>
             </div>
-            <div class="col-10 col-xl-2 mb-4 mt-5">
+            <div class="col-10 col-xl-2 mb-4 mt-5"> 
                 <!-- <h4>Menu</h4>
                 <div class="row">
                     <div class="col col-md-4">
