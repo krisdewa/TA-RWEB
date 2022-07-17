@@ -15,42 +15,35 @@
                         <div class="text-center mb-3">
                             <a href="" target="_blank"><img src="<?php echo base_url(); ?>image/logo-UAD2.png" alt="" width="200px"></a>
                         </div>
-                        <h5 class="text-center mb-4 text-muted">Register your account</h5>
-                        <!-- <div mb-2> -->
-                        <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
-                        <?php //if ($this->session->flashdata('register')) :
-                        //echo $this->session->flashdata('register');
-                        //endif; 
-                        ?>
-                        <!-- </div> -->
+                        <h4 class="mb-2 text-center" style="color: #FFAA85">Daftar Akun</h4>
 
                         <?php echo form_open('Register/add_account'); ?>
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="email">NIM</label>
-                            <input type="number" id="nama" name="nim" placeholder="input NIM" class="form-control" />
+                            <input type="number" id="nama" name="nim" placeholder="Masukkan NIM" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('nama') ?>
                             </small>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label" for="email">Nama</label>
-                            <input type="text" id="nama" name="nama" placeholder="input nama" class="form-control" />
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('nama') ?>
                             </small>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label" for="email">Username</label>
-                            <input type="text" id="nama" name="username" placeholder="input Username" class="form-control" />
+                            <input type="text" id="nama" name="username" placeholder="Masukkan Username" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('nama') ?>
                             </small>
                         </div>
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="email">Email address</label>
-                            <input type="email" id="email" name="email" placeholder="input username or email" class="form-control" />
+                            <label class="form-label" for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Masukkan username" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('email') ?>
                             </small>
@@ -58,7 +51,7 @@
                         <!-- Password input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="input password" class="form-control" />
+                            <input type="password" id="password" name="password" placeholder="Masukkan password" class="form-control" />
                             <small class="text-danger">
                                 <?php echo form_error('password') ?>
                             </small>
@@ -66,10 +59,10 @@
 
                         <!-- Submit button -->
                         <div class="d-grid gap-2 col-15 mx-auto">
-                            <button type="submit" class="btn btn-warning btn-block mb-4">REGISTER</button>
+                            <button type="submit" class="btn btn-block text-light mb-4" style="background-color: #FFAA85">REGISTER</button>
                         </div>
                         <div class="text-center mb-3">
-                            You Have Account? <a href="/login">Login Here</a>
+                            <div class="text-dark">Sudah punya akun? <a class="text-decoration-none text-warning" href="login">Klik Disini</a></div>
                         </div>
                         <?php echo form_close(); ?>
                     </div>
